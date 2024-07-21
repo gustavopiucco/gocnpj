@@ -100,7 +100,7 @@ func processFiles(db *gorm.DB, contains string, model any) {
 }
 
 func processBatch(db *gorm.DB, lines [][]string, model any) {
-	if err := utils.AppendToSlice(model, lines); err != nil {
+	if err := utils.AppendLinesToSlice(lines, model); err != nil {
 		panic(err)
 	}
 
@@ -124,7 +124,7 @@ func getCSVFiles(contains string) []string {
 	})
 
 	if err != nil {
-		fmt.Println(err)
+		panic(err)
 	}
 
 	return fileNames

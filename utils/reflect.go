@@ -11,7 +11,7 @@ func ClearSlice(slice any) {
 	sliceVal.Set(reflect.MakeSlice(sliceVal.Type(), 0, 0))
 }
 
-func AppendToSlice(slice any, lines [][]string) error {
+func AppendLinesToSlice(lines [][]string, slice any) error {
 	// Obter o valor e tipo refletido do slice
 	sliceVal := reflect.ValueOf(slice).Elem()
 	sliceType := sliceVal.Type()
