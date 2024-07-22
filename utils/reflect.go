@@ -15,7 +15,7 @@ func AppendLinesToSlice(lines [][]string, slice any) error {
 		return fmt.Errorf("provided value is not a slice")
 	}
 
-	// Limpa o slice para o próximo batch
+	// Limpa o slice para armazenar apenas as linhas do batch atual e poupar memória
 	sliceVal.Set(sliceVal.Slice(0, 0))
 
 	// Verificar o tipo dos elementos do slice
