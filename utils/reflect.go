@@ -6,11 +6,6 @@ import (
 	"strconv"
 )
 
-func ClearSlice(slice any) {
-	sliceVal := reflect.ValueOf(slice).Elem()
-	sliceVal.Set(reflect.MakeSlice(sliceVal.Type(), 0, 0))
-}
-
 func AppendLinesToSlice(lines [][]string, slice any) error {
 	// Obter o valor e tipo refletido do slice
 	sliceVal := reflect.ValueOf(slice).Elem()
@@ -20,6 +15,7 @@ func AppendLinesToSlice(lines [][]string, slice any) error {
 		return fmt.Errorf("provided value is not a slice")
 	}
 
+	// Limpa o slice para o próximo batch
 	sliceVal.Set(sliceVal.Slice(0, 0))
 
 	// Verificar o tipo dos elementos do slice
