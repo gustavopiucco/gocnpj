@@ -1,9 +1,9 @@
-package utils
+package gocnpj
 
 import "path/filepath"
 
 const (
-	BatchSize   = 5000000
+	BatchSize   = 250000
 	DBBatchSize = 1000
 )
 

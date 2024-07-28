@@ -8,6 +8,7 @@ Baixe todos os arquivos do CNPJ em https://dados.gov.br/dados/conjuntos-dados/ca
 Extraia-os para a pasta data/zip
 
 Baixe todas as dependencias com ```go mod tidy```
-Execute ```go run main```
+
+Execute ```go run cmd/main```
 
 Será criado um banco de dados SQLite em data/cnpj.db e você pode utilizar os gerenciadores de banco de dados DataGrip ou DBeaver(gratuito) para fazer as consultas

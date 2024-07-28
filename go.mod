@@ -1,4 +1,4 @@
-module gocnpj
+module github.com/gustavopiucco/gocnpj
 
 go 1.22.5
 
